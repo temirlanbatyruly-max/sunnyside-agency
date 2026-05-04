@@ -1,0 +1,62 @@
+:root {
+  --main-blue: #36536b;
+  --accent-pink: #ba4270;
+  --bg-light: #edf3f8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-light);
+  overflow-x: hidden; /* Чтобы фоновый круг не создавал прокрутку */
+}
+
+/* --- ПОЗИЦИОНИРОВАНИЕ КРУГА --- */
+.hero {
+  position: relative; /* Якорь для абсолютного круга */
+  padding: 40px 10%;
+  min-height: 100vh;
+}
+
+.bg-circle {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background-color: #dae5ed;
+  border-radius: 50%;
+  z-index: -1; /* Уходит под текст и телефон */
+}
+
+/* --- ВЕРХНЕЕ МЕНЮ (FLEXBOX) --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* --- ГЛАВНЫЙ БЛОК (GRID) --- */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Левая часть чуть шире */
+  align-items: center;
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 72px;
+  color: var(--main-blue);
+  line-height: 1.1;
+}
+
+/* --- КНОПКИ И ВВОД --- */
+.search-box {
+  display: flex;
+  background
